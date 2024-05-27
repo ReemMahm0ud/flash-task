@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "flash apis",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "node --watch index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReemMahm0ud/flash-task.git"
+  },
+  "author": "reem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ReemMahm0ud/flash-task/issues"
+  },
+  "homepage": "https://github.com/ReemMahm0ud/flash-task#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
