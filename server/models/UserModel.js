@@ -18,10 +18,6 @@ const UserSchema = mongoose.Schema(
       type: String,
       required: [true, "Please add the phone"],
     },
-    password: {
-      type: String,
-      required: [true, "Please add the password"],
-    },
   },
   {
     timestamps: true,
