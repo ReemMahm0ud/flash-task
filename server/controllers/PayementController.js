@@ -5,8 +5,6 @@ const uuid = require("uuid");
 const payloadSchema = require("../validations/requestValidate");
 const transactionSchema = require("../validations/webHookValidate");
 
-// ^01[0-2,5]{1}[0-9]{8}$
-
 const initiatePayment = async (req, res) => {
   try {
     const {

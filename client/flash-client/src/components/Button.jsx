@@ -1,7 +1,6 @@
 import { useLocation } from "react-router-dom";
 export const Button = ({ text, onCall, disabled, isMobile }) => {
   const location = useLocation();
-  console.log(location.pathname);
   return (
     <>
       {!isMobile && location.pathname === "/download_app" ? (

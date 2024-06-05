@@ -1,14 +1,9 @@
-// import { useEffect, useState } from "react";
 import { Layout } from "../components/Layout";
-// import { isMobileDevice } from "../utils/utils";
 import qrCodeFlashApp from "../assets/qrcode_flash_app.png";
 import { useSelector } from "react-redux";
 
 export const DownloadPage = () => {
-  //   const [isMobile, setIsMobile] = useState(false);
   const { deviceType } = useSelector((state) => state.authSlice);
-
-  console.log("device type", deviceType);
 
   const buttonHandler = (e) => {
     e.preventDefault();
@@ -36,10 +31,6 @@ export const DownloadPage = () => {
   const qrImgProps = {
     qrImage: qrCodeFlashApp,
   };
-
-  //   useEffect(() => {
-  //     setIsMobile(isMobileDevice());
-  //   }, []);
 
   return (
     <>

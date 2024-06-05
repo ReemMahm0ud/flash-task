@@ -13,24 +13,6 @@ export const PaymentPage = () => {
     );
   };
 
-  //   const generateQRImg = async (paymentLink) => {
-  //     await axios
-  //       .get(
-  //         `https://api.qrserver.com/v1/create-qr-code/?size=211x210&data=${paymentLink}`
-  //       )
-  //       .then((response) => {
-  //         setImg(response);
-  //       })
-  //       .catch((error) => {
-  //         console.error(error);
-  //         toast.error("Error occurred");
-  //       });
-  //   };
-
-  //   useEffect(() => {
-  //     generateQRImg(paymentLink);
-  //   }, []);
-
   return (
     <>
       {deviceType ? (

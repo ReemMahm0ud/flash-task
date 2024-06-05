@@ -14,7 +14,6 @@ export const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [phone, setPhone] = useState("");
-  // const [isMobile, setIsMobile] = useState("");
   const [loginApi] = useLoginApiMutation();
   const [isRegistered] = useIsRegisteredMutation();
   const [initatePayment] = useInitatePaymentMutation();
@@ -24,13 +23,10 @@ export const Home = () => {
   const clientLogin = btoa(`${clientId}:${clientSecret}`);
   const phoneRegex = /^01[0-2,5]{1}[0-9]{8}$/;
 
-  // console.log(clientLogin);
-
   const checkUser = async (token, phone) => {
     await isRegistered({ token, phone })
       .unwrap()
       .then((fulfilled) => {
-        console.log("user checked", fulfilled);
         if (fulfilled === false) {
           navigate("/download_app");
         } else {
@@ -57,7 +53,6 @@ export const Home = () => {
     await initatePayment({ token, payload })
       .unwrap()
       .then((fulfilled) => {
-        console.log("generate link", fulfilled.order.billingInfo);
         dispatch(savePaymentLink(fulfilled.order.paymentLink));
         dispatch(addCustomerName(fulfilled.order.billingInfo.customerName));
       })
@@ -75,7 +70,6 @@ export const Home = () => {
     if (!phoneRegex.test(phone)) {
       return toast.error("Please enter a a valid phone number");
     }
-    console.log("check phone number", phone);
 
     try {
       await generatePaymentLink(token, phone);
@@ -116,7 +110,6 @@ export const Home = () => {
 
   useEffect(() => {
     getToken(clientLogin);
-    // setIsMobile(isMobileDevice());
     dispatch(checkDevice(isMobileDevice()));
   }, []);
 

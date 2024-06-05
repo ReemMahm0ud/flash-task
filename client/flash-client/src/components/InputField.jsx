@@ -6,7 +6,6 @@ export const InputField = ({ phone, setPhone }) => {
   const phoneHandler = (e) => {
     setPhone(e.target.value);
     dispatch(addPhone(e.target.value));
-    console.log(e.target.value);
   };
   return (
     <>

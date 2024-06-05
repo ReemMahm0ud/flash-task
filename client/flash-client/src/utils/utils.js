@@ -1,6 +1,5 @@
 export const isMobileDevice = () => {
   const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  console.log("agent is mobile", userAgent);
 
   // Detect iOS
   if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
