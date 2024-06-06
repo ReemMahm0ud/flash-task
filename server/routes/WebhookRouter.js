@@ -6,6 +6,7 @@ const {
 const transactionSchema = require("../validations/webHookValidate");
 const validateMiddleware = require("../middlewares/validateMiddleware");
 
+// define the post route for the webhook controller with validation middleware
 webhookRouter.post(
   "/transaction-callback",
   validateMiddleware(transactionSchema),

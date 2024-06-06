@@ -11,5 +11,4 @@ paymentRouter.post(
   verifyTokenMiddleware,
   initiatePayment
 );
-// paymentRouter.get("/my-route", middleware1, routeHandler);
 module.exports = paymentRouter;
