@@ -6,8 +6,8 @@ const cors = require("cors");
 // import the routes modules
 const authRouter = require("./routes/AuthRouter");
 const paymentRouter = require("./routes/PaymentRouter");
-const webhookRouter = require("./routes/WebhookRouter").default;
-const userRouter = require("./routes/UserRouter").default;
+const webhookRouter = require("./routes/WebhookRouter");
+const userRouter = require("./routes/UserRouter");
 // connect to the database
 connectDB();
 // create  instance of the application
@@ -26,5 +26,3 @@ const port = 8000;
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });
-
-export { app };
